@@ -1,11 +1,21 @@
 const listCon = document.querySelector(".list-konten");
 const btnAdd = document.getElementById("btn-add");
 const inputEl = document.getElementById("input-list");
+const label = document.getElementById("input-label");
 
-let list = [
-  "makan nasi",
-  "saya makan nasi 1 bungkus dengan lahap dengan es teh 1 liter dan gorengan satu baskom",
-];
+let list = ["illustrasi mobil", "Beli sapu lidi"];
+
+function toggleLabel() {
+  if (document.activeElement === inputEl || inputEl.value.trim() !== "") {
+    label.classList.add("displayNone");
+  } else {
+    label.classList.remove("displayNone");
+  }
+}
+
+inputEl.addEventListener("focus", toggleLabel);
+inputEl.addEventListener("input", toggleLabel);
+inputEl.addEventListener("blur", toggleLabel);
 
 // Fungsi untuk membuat elemen to-do
 function buatItem(teksIsi) {
@@ -121,4 +131,5 @@ btnAdd.addEventListener("click", function () {
     buatItem(inputList);
     inputEl.value = ""; // kosongkan input setelah tambah
   }
+  label.classList.remove("displayNone");
 });

@@ -15,7 +15,7 @@ button {
   border: none;
 }
 :root {
-  --accen-color: #555879;
+  --accen-color: #0d5ea6;
 
   --font-color: #212121;
 }
@@ -25,14 +25,13 @@ main {
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background-color: #ded3c4;
+  background-color: #fffcfb;
 }
 
 .container {
   width: 90%;
   max-width: 30rem;
   height: 100%;
-  /* background-color: aqua; */
   padding: 0 1rem 0 1rem;
 }
 
@@ -55,7 +54,7 @@ main {
 .container-form label {
   position: absolute;
   margin-left: 0.5rem;
-  font-weight: 200;
+  font-weight: 500;
 }
 .container-form input {
   height: 100%;
@@ -97,7 +96,7 @@ p {
 }
 
 .backgroundBlack {
-  background-color: black;
+  background-color: var(--accen-color);
 }
 .displayAda {
   display: flex !important;
@@ -106,4 +105,8 @@ p {
   text-decoration: line-through;
   text-decoration-thickness: 2px;
   color: gray;
+}
+
+.displayNone {
+  display: none;
 }
